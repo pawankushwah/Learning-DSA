@@ -6,22 +6,32 @@ using namespace std;
 
 void toDecimal()
 {
-    string binary;
+    // Taking input from the user
+    string number;
     cout << "binary: ";
-    getline(cin, binary);
+    getline(cin, number);
 
+    // Declaration of variables
     int sum = 0;
     int posWeight = 1;
-    int maxTerm = binary.length();
+    int maxTerm = number.length();
+
+    // loop for converting (binary, octal and hexadecimal) number to decimal number
     for (int i = 1; i <= maxTerm; i++)
     {
-        int number = (isalpha((binary[maxTerm - i])) != 0) ? ((binary[maxTerm - i]) - 'a' + 10) : ((binary[maxTerm - i]) - '0');
+        int number = (isalpha((number[maxTerm - i])) != 0) ? ((number[maxTerm - i]) - 'a' + 10) : ((number[maxTerm - i]) - '0');
         sum += number * posWeight;
-        posWeight *= 2;
+
+        // for changing number from octal and hexadecimal replace 2 with 8 and 16
+        posWeight *= 2; 
     }
+
+    // printing the decimal number or result
     cout << "Decimal = " << sum;
+
+    // some lines for debugging the code
     // cout<<endl<<maxTerm;
-    // cout<<endl<<binary[0];
+    // cout<<endl<<number[0];
     return;
 }
 
