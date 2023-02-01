@@ -24,6 +24,10 @@ int insertion(int *arr, int *size, int capacity, int element, int index)
 }
 
 void deletation(int *arr, int *size, int capacity, int index){
+    if(index < 0) {
+        printf("Deletation Unsuccessful\n");
+        return;
+    }
     int arrSize = *size;
 
     for (int i = index; i < arrSize - 1; i++)
@@ -45,7 +49,7 @@ int main(void)
 
     traversal(array, size);
 
-    deletation(array, &size, capacity, 3);
+    deletation(array, &size, capacity, -1);
     
     traversal(array, size);
     return 0;
