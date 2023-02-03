@@ -8,4 +8,5 @@ If anybody want to revise then I have no problem.
 - [X] Linked list
 - [X] Circular linked list
 - [X] Doubly linked list
-- [X] Stack
+- [X] Stack with array and pointer
+- [X] Stack with struct and pointer
